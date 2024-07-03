@@ -1,8 +1,7 @@
 import express from "express";
-import { Request, Response } from "express";
 import mailRouter from "./src/email.route";
 
-(async (): Promise<void> => {
+(async () => {
   try {
     const app = express();
     const port = 3000;
@@ -10,7 +9,7 @@ import mailRouter from "./src/email.route";
     app.use(express.json());
     app.use("/mail", mailRouter);
 
-    app.get("/", (req: Request, res: Response) => {
+    app.get("/", (req, res) => {
       res.status(200).send("api is working");
     });
 
