@@ -1,10 +1,13 @@
 import express from "express";
 import mailRouter from "./src/email.route";
+import cors from "cors";
 
 (async () => {
   try {
     const app = express();
     const port = 3000;
+
+    app.use(cors());
 
     app.use(express.json());
     app.use("/mail", mailRouter);
