@@ -16,7 +16,7 @@ import mailRouter from "./src/email.route";
     app.listen(port, () => {
       console.log("app is running on http://localhost:3000");
     });
-  } catch (err) {
+  } catch (err: any) {
     console.error(err.message, "errp");
   }
 })();

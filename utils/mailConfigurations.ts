@@ -13,6 +13,7 @@ export interface MailOptions {
   bcc?: string;
   subject: string;
   text: string;
+  information: any;
 }
 
 // Initialize OAuth2Client with your credentials

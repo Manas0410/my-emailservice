@@ -5,6 +5,7 @@ import { MailOptions, sendMail } from "../utils/mailConfigurations";
 const mailController = async (req: Request, res: Response) => {
   try {
     const { tomail, bcc = "", subject, message, information } = req.body;
+    console.log(information);
 
     const mailOptions: MailOptions = {
       from: `Team MANAS <${senderMailAddress}>`,
@@ -12,6 +13,7 @@ const mailController = async (req: Request, res: Response) => {
       bcc: bcc,
       subject: subject,
       text: message,
+      information,
     };
 
     await sendMail(mailOptions);
