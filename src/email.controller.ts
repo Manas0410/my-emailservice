@@ -15,8 +15,7 @@ const mailController = async (req: Request, res: Response) => {
     const fullMessage = `
       ${message}
       
-      Additional Information:
-      ${informationString}
+      ${informationString?  "Additional Information:" informationString : "" }
     `;
 
     const mailOptions: MailOptions = {
