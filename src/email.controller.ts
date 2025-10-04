@@ -20,7 +20,7 @@ const mailController = async (req: Request, res: Response) => {
 
 
     const mailOptions: MailOptions = {
-      from: `Team MANAS <${senderMailAddress}>`,
+      from: `Team 25Hours <${senderMailAddress}>`,
       to: tomail,
       bcc: bcc,
       subject: subject,
