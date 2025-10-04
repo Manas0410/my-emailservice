@@ -12,11 +12,12 @@ const mailController = async (req: Request, res: Response) => {
       : "";
 
     // Append the serialized information to the message
-    const fullMessage = `
-      ${message}
-      
-      ${informationString?  "Additional Information:" informationString : "" }
-    `;
+   const fullMessage = `
+  ${message}
+  
+  ${informationString ? `Additional Information:\n${informationString}` : ""}
+`;
+
 
     const mailOptions: MailOptions = {
       from: `Team MANAS <${senderMailAddress}>`,
