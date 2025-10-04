@@ -15,8 +15,8 @@ const mailController = async (req: Request, res: Response) => {
    const fullMessage = `
   ${message}
   
-  ${informationString ? `Additional Information:\n${informationString}` : ""}
 `;
+  // ${informationString ? `Additional Information:\n${informationString}` : ""}
 
 
     const mailOptions: MailOptions = {
